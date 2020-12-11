@@ -10,7 +10,7 @@ namespace SimpleConsoleApp
         private const String info = "Write 1 to firs task : Get biger of two number \n" +
                               "Write 2 to second task work with triangle \n" +
                               "Write " + exitInput + "to exit";
-        static void Main(string[] args)
+        static void main(string[] args)
         {
          
             bool flag = true;
