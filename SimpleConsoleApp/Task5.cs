@@ -47,7 +47,7 @@ namespace SimpleConsoleApp
 
     class Task52
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.WriteLine("Количество месяцев");
             int a = int.Parse(Console.ReadLine());

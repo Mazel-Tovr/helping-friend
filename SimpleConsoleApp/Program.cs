@@ -10,7 +10,7 @@ namespace SimpleConsoleApp
         private const String info = "Write 1 to firs task : Get biger of two number \n" +
                               "Write 2 to second task work with triangle \n" +
                               "Write " + exitInput + "to exit";
-        static void main(string[] args)
+        static void Main(string[] args)
         {
          
             bool flag = true;
@@ -42,15 +42,54 @@ namespace SimpleConsoleApp
         }
     }
 
-    class BigestNumer
-    {
+    //class BigestNumer
+    //{
+    //    public void start()
+    //    {
+    //        int firstNumber = getNumber("first");
+    //        int secondNumber = getNumber("second");
+
+    //        WriteLine(firstNumber == secondNumber ? "Nubers are equal" :
+    //            firstNumber > secondNumber ?
+    //            "First number is bigger then second" :
+    //            "Second number is bigger then first");
+
+    //    }
+
+    //    private int getNumber(String number)
+    //    {
+    //        int result;
+    //        while (true)
+    //        {
+    //            WriteLine("Write a " + number + " number");
+    //            String input = ReadLine();
+    //            if (input.Length == 2)
+    //            {
+    //                if (!Int32.TryParse(input, out result))
+    //                {
+    //                    WriteLine("Only numbers allowed");
+    //                }
+    //                else
+    //                {
+    //                    break;
+    //                }
+    //            }
+    //            else
+    //            {
+    //                WriteLine("Number length should be 2 char");
+    //            }
+    //        }
+    //        return result;
+    //    }
+    //}
+
+    class BigestNumer {
         public void start()
         {
-            int firstNumber = getNumber("first");
-            int secondNumber = getNumber("second");
-
-            WriteLine(firstNumber == secondNumber ? "Nubers are equal" :
-                firstNumber > secondNumber ?
+            char[] num = getNumber("").ToString().ToCharArray(); ;
+           
+            WriteLine( int.Parse(num[0].ToString()) == int.Parse(num[1].ToString()) ? "Nubers are equal" :
+               int.Parse(num[0].ToString()) > int.Parse(num[1].ToString()) ?
                 "First number is bigger then second" :
                 "Second number is bigger then first");
 
