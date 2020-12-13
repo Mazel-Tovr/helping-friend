@@ -88,7 +88,7 @@ namespace SimpleConsoleApp
         {
             char[] num = getNumber("").ToString().ToCharArray(); ;
            
-            WriteLine( int.Parse(num[0].ToString()) == int.Parse(num[1].ToString()) ? "Nubers are equal" :
+            WriteLine( int.Parse(num[0].ToString()) == int.Parse(num[1].ToString()) ? "Numbers are equal" :
                int.Parse(num[0].ToString()) > int.Parse(num[1].ToString()) ?
                 "First number is bigger then second" :
                 "Second number is bigger then first");
@@ -126,11 +126,12 @@ namespace SimpleConsoleApp
     {
         public void start()
         {
-            int firstNumber = getNumber("first");
-            int secondNumber = getNumber("second");
-            int thirdNumber = getNumber("third");
 
-            if(!(firstNumber + secondNumber > thirdNumber || firstNumber + thirdNumber > secondNumber || secondNumber +thirdNumber > firstNumber))
+            int firstNumber = int.Parse(Console.ReadLine());//getNumber("first");
+            int secondNumber = int.Parse(Console.ReadLine());//getNumber("second");
+            int thirdNumber = int.Parse(Console.ReadLine());//getNumber("third");
+
+            if (!(firstNumber + secondNumber >= thirdNumber && firstNumber + thirdNumber >= secondNumber && secondNumber +thirdNumber >= firstNumber))
             {
                 WriteLine("This triangle doesn't exists");
                 return;
