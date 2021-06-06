@@ -54,31 +54,14 @@ namespace Hotel
             string[] lines = System.IO.File.ReadAllLines(@"D:\GitHub\helping-friend\secondSemak\ThirdTask\rooms.txt");
             for (int i = 0; i < lines.Length; i++)
             {
-               string[] data = lines[i].Split(';');
-               Types types = Types.Стандарт;
-               switch (data[0])
-               {
-                   case "Люкс":
-                       types = Types.Люкс;
-                       break;
-                   case "Полулюкс":
-                       types = Types.Полулюкс;
-                       break;
-                   case "Стандарт":
-                       types = Types.Стандарт;
-                       break;
-                   case "Эконом":
-                       types = Types.Эконом;
-                       break;
-               }
+                string[] data = lines[i].Split(';');
+                Enum.TryParse(data[0], out Types types);
                 int count = int.Parse(data[1]);
                 bool isTv = data[2] == "Да";
                 bool isFriedg = data[3] == "Да";
                 int totalSumm = int.Parse(data[4]); ;
                 hotels.Add(new Hotel(types, count, isTv, isFriedg, totalSumm));
             }
-
-
         }
 
         private void fillTb()
